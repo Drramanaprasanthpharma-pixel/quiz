@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+@layer base {
+  * {
+    @apply border-ink/10;
+  }
+  body {
+    @apply bg-paper text-ink font-body antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+  :focus-visible {
+    outline: 3px solid #6c5ce7;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Answer tile shape accents — a color-only cue is never the sole signal;
+   each option also gets a distinct glyph rendered via clip-path. */
+.shape-triangle { clip-path: polygon(50% 8%, 92% 92%, 8% 92%); }
+.shape-diamond { clip-path: polygon(50% 4%, 96% 50%, 50% 96%, 4% 50%); }
+.shape-hexagon { clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%); }
