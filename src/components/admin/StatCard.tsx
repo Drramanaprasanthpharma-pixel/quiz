@@ -11,7 +11,7 @@ export function StatCard({
   icon: LucideIcon;
   accent?: "signal" | "mint" | "gold" | "coral";
 }) {
-  const accentClasses: Record<string, string> = {
+  const accentClasses: Record<"signal" | "mint" | "gold" | "coral", string> = {
     signal: "border-l-signal text-signal-dark bg-signal/10",
     mint: "border-l-mint text-mint-dark bg-mint/10",
     gold: "border-l-gold text-gold-dark bg-gold/10",
