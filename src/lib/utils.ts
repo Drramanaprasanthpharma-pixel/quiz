@@ -67,12 +67,12 @@ export function shapeForIndex(i: number): AnswerShape {
 }
 
 const ANSWER_COLOR_CLASSES = [
-  "bg-signal hover:bg-signal-dark",
-  "bg-coral hover:bg-coral-dark",
+  "bg-signal text-white hover:bg-signal-dark",
+  "bg-coral text-white hover:bg-coral-dark",
   "bg-gold text-ink hover:bg-gold-dark",
   "bg-mint text-ink hover:bg-mint-dark",
-  "bg-ink600 hover:bg-ink-soft",
-  "bg-signal-dark hover:bg-ink-soft",
+  "bg-ink600 text-white hover:bg-ink-soft",
+  "bg-signal-dark text-white hover:bg-ink-soft",
 ];
 
 export function colorClassForIndex(i: number): string {

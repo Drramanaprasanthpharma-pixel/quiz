@@ -54,6 +54,8 @@ export interface QuizSession {
   current_question_id: string | null;
   question_started_at: string | null;
   question_ends_at: string | null;
+  is_paused: boolean;
+  paused_at: string | null;
   created_at: string;
   ended_at: string | null;
 }

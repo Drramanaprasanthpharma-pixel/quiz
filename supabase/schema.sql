@@ -379,3 +379,13 @@ alter publication supabase_realtime add table quiz_sessions;
 alter publication supabase_realtime add table participants;
 alter publication supabase_realtime add table participant_answers;
 alter publication supabase_realtime add table leaderboards;
+
+-- ----------------------------------------------------------------------------
+-- Let players read the quiz title for a live session (join screen).
+-- ----------------------------------------------------------------------------
+drop policy if exists "quizzes public read live" on quizzes;
+create policy "quizzes public read live" on quizzes for select
+  using (exists (
+    select 1 from quiz_sessions s
+    where s.quiz_id = quizzes.id and s.status <> 'ended'
+  ));

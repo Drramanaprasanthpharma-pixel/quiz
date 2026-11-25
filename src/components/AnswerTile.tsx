@@ -31,7 +31,7 @@ export function AnswerTile({ index, text, disabled, selected, reveal, onClick }:
       onClick={onClick}
       aria-pressed={selected}
       className={cn(
-        "relative flex min-h-[88px] items-center justify-center gap-3 px-5 py-4 text-center font-display text-lg font-semibold text-white shadow-lg transition-transform active:scale-[0.98] disabled:active:scale-100",
+        "relative flex min-h-[88px] items-center justify-center gap-3 px-5 py-4 text-center font-display text-lg font-semibold shadow-lg transition-transform active:scale-[0.98] disabled:active:scale-100",
         shapeClass,
         colorClassForIndex(index),
         selected && !reveal && "ring-4 ring-white",
